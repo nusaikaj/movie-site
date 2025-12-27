@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131720;
+    font-family: sans-serif;
+    color: white;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+/* Navbar */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131720;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color:aqua;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.topnav .search-container form {
+    display: flex;
+    align-items: center;
+    background-color: #100f0f;
+    border-radius: 11px;
+    padding: 5px 10px;
+}
+
+.topnav .search-container input {
+    all: unset;
+    font: 16px system-ui;
+    color: white;
+    padding: 6px 8px;
+    width: 200px;
+}
+
+/* Movie grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Movie card */
+.card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Movie image */
+.thumbnail {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Overlay info on hover */
+.card-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.card:hover .card-info {
+    transform: translateY(0);
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
